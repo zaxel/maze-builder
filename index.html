@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maze path auto builder</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="module" src="./js/burger.js"></script>
+    <script type="module" src="./js/script.js"></script>
+</head>
+
+<body class="maze">
+    <div class="maze__wrapper">
+        <canvas id="maze__canvas"></canvas>
+        <section class="maze__popup popup">
+            <div class="popup__content hidden">
+                <div class="popup__title">
+                    <img src="./img/form_logo.svg" alt="setup logo">
+                </div>
+                <h2>settings</h2>
+                <form class="popup__form">
+                    <label for="speed">speed:</label><br />
+                    <input type="range" id="speed" name="speed" list="markers" step="10" />
+                    
+                    <label for="dense">cells dense:</label><br />
+                    <input type="range" id="dense" name="dense" list="markers" step="10" />
+                    <datalist id="markers">
+                        <option value="0"></option>
+                        <option value="20"></option>
+                        <option value="40"></option>
+                        <option value="60"></option>
+                        <option value="80"></option>
+                        <option value="100"></option>
+                    </datalist>
+                    <fieldset class="popup__slider">
+                        <legend>night mode:</legend>
+                        <input type="checkbox" id="mode" name="mode" />
+                        <label for="mode"></label>
+                    </fieldset>
+                    <fieldset class="popup__buttons">
+                        <Button type="reset" class="popup__btn_default">default</Button>
+                        <Button class="popup__btn_run">run</Button>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="burger" tabindex="1" class="popup__burger"><span class="popup__burger_line"></span></div>
+
+
+        </section>
+    </div>
+</body>
+
+</html>

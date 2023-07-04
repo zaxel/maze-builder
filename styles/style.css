@@ -1,0 +1,259 @@
+﻿  @font-face {
+      font-family: "HelveticaNeue";
+      font-display: swap;
+      src: url("../fonts/Helvetica_Neue_Medium.woff") format("woff"), url("../fonts/Helvetica_Neue_Medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+  }
+  @font-face {
+      font-family: "HelveticaNeue";
+      font-display: swap;
+      src: url("../fonts/Helvetica_Neue_Bold.woff") format("woff"), url("../fonts/Helvetica_Neue_Bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+  }
+  /*reset start*/
+  * {
+      box-sizing: border-box;
+  }
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+      display: block;
+  }
+  html {
+      font-family: "HelveticaNeue", serif;
+      font-weight: 500;
+      font-size: 16px;
+  }
+  body {
+      line-height: 1;
+  }
+  ol, ul {
+      list-style: none;
+  }
+  blockquote, q {
+      quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+      content: '';
+      content: none;
+  }
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+  /*reset end*/
+  body {
+      width: 100vw;
+      height: 100vh;
+      padding: 8px;
+      background-color: #CBD28F;
+  }
+  .maze__wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  }
+
+  /*popup start*/
+  /*burger start*/
+  .popup__burger.active:before {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 11px;
+      -webkit-transition: .5s;
+      transition: .5s;
+  }
+  .popup__burger.active:after {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      bottom: 11px;
+      -webkit-transition: .5s;
+      transition: .5s;
+  }
+  .popup__burger.active span {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  .popup__burger {
+      background-color: #EFEFEF;
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 30px;
+      height: 24px;
+  }
+  .popup__burger:hover {
+      cursor: pointer;
+  }
+  .popup__burger_line {
+      position: absolute;
+      width: 26px;
+      height: 2px;
+      background: #E8C258;
+      top: 50%;
+      left: 2px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+  }
+  .popup__burger:before,
+  .popup__burger:after {
+      content: '';
+      position: absolute;
+      background: #E8C258;
+      width: 26px;
+      left: 2px;
+      height: 2px;
+      -webkit-transition: .5s;
+      transition: .5s;
+  }
+  .popup__burger:before {
+      top: 4px;
+  }
+  .popup__burger:after {
+      bottom: 4px;
+  }
+  /*burger end*/
+
+  .maze__popup {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+  }
+  .popup__content {
+      width: 180px;
+      padding: 8px;
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: 3px 3px 13px rgba(0, 0, 0, .7);
+      transition: opacity 0.5s ease-in-out;
+  }
+  .popup__title {
+      position: relative;
+      margin: 0 auto 8px;
+      width: 45px;
+      height: 30px;
+  }
+  .popup__title>img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+  }
+  .popup h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 10px;
+  }
+  .popup input {
+      margin-bottom: 8px;
+  }
+  .popup__slider {
+      position: relative;
+      margin-bottom: 14px;
+  }
+  label[for="mode"] {
+      position: absolute;
+      right: 28px;
+      top: -18px;
+      width: 36px;
+      height: 22px;
+      border: 1px solid #005CC8;
+      background-color: #EFEFEF;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+  }
+  .popup [type='checkbox']:checked+label[for="mode"] {
+      background-color: #A37B73FF;
+      transition: background-color 0.3s ease-in-out;
+  }
+  label[for="mode"]::after {
+      position: absolute;
+      transition: left 0.2s ease-in-out;
+      top: 1px;
+      left: 1px;
+      width: 18px;
+      height: 18px;
+      content: '';
+      background-color: #0075FF;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+  label[for="mode"]:hover::after {
+      background-color: #005CC8;
+  }
+  .popup [type='checkbox'] {
+      display: none;
+  }
+  .popup [type='checkbox']:checked+label[for="mode"]::after {
+      left: 14px;
+      transition: left 0.2s ease-in-out;
+  }
+  .popup [type='range']:last-of-type {
+      margin-bottom: 11px;
+  }
+  .popup__buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 8px;
+  }
+  .popup__buttons button {
+      min-width: 65px;
+      padding: 6px 16px;
+      font-family: inherit;
+      background-color: #E8C258;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+      transition: box-shadow 0.1s ease-in-out;
+  }
+  .popup__buttons button:active {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+      transition: box-shadow 0.1s ease-in-out;
+  }
+  /*popup end*/
+  
+  /*services classes start*/
+  .dark-bg-burger {
+      background-color: #A37B73FF;
+  }
+  .dark-bg-body {
+      background-color: #3E282BFF;
+  }
+  .hidden {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .nodisplay {
+      display: none;
+  }
+  /*services classes end*/

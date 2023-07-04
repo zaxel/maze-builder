@@ -1,0 +1,36 @@
+<svg width="40px" height="30px" viewBox="0 0 40 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo</title>
+    <defs>
+        <filter x="-30.9%" y="-25.4%" width="148.6%" height="159.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-28.5%" y="-21.7%" width="157.0%" height="143.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+        <g id="Group" filter="url(#filter-1)">
+            <g id="Direct-Deposit-Enrollment" filter="url(#filter-2)">
+                <g id="Logo" transform="translate(0.000000, 0.000000)" fill="#E8C259">
+                    <g id="Symbol">
+                        <path d="M2.9062,19.345 L1.8746,19.345 C1.0198,19.345 0.3266,18.6518 0.3266,17.797 L0.3266,6.9306 C0.3266,6.0758 1.0198,5.3826 1.8746,5.3826 L2.7366,5.3826 C3.5914,5.3826 4.2846,6.0758 4.2846,6.9306 L4.2846,17.9666 C4.2846,18.7278 3.6674,19.345 2.9062,19.345" id="Fill-2"></path>
+                        <path d="M24.6442,24.7274 L23.6126,24.7274 C22.7578,24.7274 22.0646,24.0342 22.0646,23.1794 L22.0646,1.5482 C22.0646,0.6934 22.7578,0.0002 23.6126,0.0002 L24.4746,0.0002 C25.3294,0.0002 26.0226,0.6934 26.0226,1.5482 L26.0226,23.349 C26.0226,24.1102 25.4054,24.7274 24.6442,24.7274" id="Fill-4"></path>
+                        <path d="M10.1522,24.7274 L9.1206,24.7274 C8.2658,24.7274 7.5726,24.0342 7.5726,23.1794 L7.5726,1.5482 C7.5726,0.6934 8.2658,0.0002 9.1206,0.0002 L9.9826,0.0002 C10.8374,0.0002 11.5306,0.6934 11.5306,1.5482 L11.5306,23.349 C11.5306,24.1102 10.9134,24.7274 10.1522,24.7274" id="Fill-6"></path>
+                        <path d="M31.8902,19.345 L30.8586,19.345 C30.0038,19.345 29.3106,18.6518 29.3106,17.797 L29.3106,6.9306 C29.3106,6.0758 30.0038,5.3826 30.8586,5.3826 L31.7206,5.3826 C32.5754,5.3826 33.2686,6.0758 33.2686,6.9306 L33.2686,17.9666 C33.2686,18.7278 32.6514,19.345 31.8902,19.345" id="Fill-8"></path>
+                        <path d="M17.3982,19.78288 L16.3666,19.78288 C15.5118,19.78288 14.8186,19.08968 14.8186,18.23488 L14.8186,7.67688 C14.8186,6.82168 15.5118,6.12888 16.3666,6.12888 L17.2286,6.12888 C18.0834,6.12888 18.7766,6.82168 18.7766,7.67688 L18.7766,18.40448 C18.7766,19.16568 18.1594,19.78288 17.3982,19.78288" id="Fill-10"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+</svg>
